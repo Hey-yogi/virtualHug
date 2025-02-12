@@ -1,0 +1,95 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+  }
+  
+  .container {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    width: 400px;
+  }
+  
+  .hug-img {
+    width: 80%;
+    max-width: 250px;
+    transition: transform 0.5s;
+  }
+  
+  .hugging {
+    transform: scale(1.1);
+  }
+  
+  .btn {
+    background: #ff758c;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+    width: 100%;
+  }
+  
+  .btn:hover {
+    background: #e05672;
+  }
+  
+  .message {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #333;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 480px) {
+    .container {
+      width: 90%;
+      padding: 15px;
+    }
+    
+    .hug-img {
+      width: 70%;
+    }
+  
+    .btn {
+      font-size: 14px;
+      padding: 10px 20px;
+    }
+  
+    .message {
+      font-size: 16px;
+    }
+  }
+  
+  @keyframes fall {
+    0% {
+      transform: translateY(-10vh) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
+  .flower {
+    position: fixed;
+    top: 0;
+    width: 60px;
+    height: 30px;
+    background-image: url('../../assets/heart-removebg-preview.png'); /* Heart/Flower Image */
+    background-size: cover;
+    animation: fall linear infinite;
+  }
+  
